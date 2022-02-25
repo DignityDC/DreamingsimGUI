@@ -1,0 +1,1005 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local MainFrame = Instance.new("Frame")
+local TopFrameRGB = Instance.new("Frame")
+local AFButton = Instance.new("TextButton")
+local AutoUpgrade = Instance.new("TextButton")
+local RedeemCodes = Instance.new("TextButton")
+local JoinCorrectGame = Instance.new("TextButton")
+local Multiplier = Instance.new("TextButton")
+local BuyBeds = Instance.new("TextButton")
+local AntiAFK = Instance.new("TextButton")
+local AutoRankup = Instance.new("TextButton")
+local AutoSell = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = ScreenGui
+MainFrame.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
+MainFrame.Position = UDim2.new(0.642479122, 0, 0.382822096, 0)
+MainFrame.Size = UDim2.new(0, 229, 0, 320)
+
+TopFrameRGB.Name = "TopFrameRGB"
+TopFrameRGB.Parent = MainFrame
+TopFrameRGB.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TopFrameRGB.Size = UDim2.new(0, 228, 0, 7)
+
+AFButton.Name = "AFButton"
+AFButton.Parent = MainFrame
+AFButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+AFButton.Position = UDim2.new(0.0511831753, 0, 0.845533013, 0)
+AFButton.Size = UDim2.new(0, 93, 0, 26)
+AFButton.Font = Enum.Font.RobotoMono
+AFButton.Text = "Autofarm"
+AFButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+AFButton.TextSize = 14.000
+
+AutoUpgrade.Name = "Auto Upgrade"
+AutoUpgrade.Parent = MainFrame
+AutoUpgrade.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+AutoUpgrade.Position = UDim2.new(0.527165711, 0, 0.845533013, 0)
+AutoUpgrade.Size = UDim2.new(0, 93, 0, 26)
+AutoUpgrade.Font = Enum.Font.RobotoMono
+AutoUpgrade.Text = "Auto Upgrade"
+AutoUpgrade.TextColor3 = Color3.fromRGB(0, 0, 0)
+AutoUpgrade.TextSize = 14.000
+
+RedeemCodes.Name = "Redeem Codes"
+RedeemCodes.Parent = MainFrame
+RedeemCodes.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+RedeemCodes.BorderColor3 = Color3.fromRGB(65, 65, 65)
+RedeemCodes.Position = UDim2.new(0.0511831641, 0, 0.717408001, 0)
+RedeemCodes.Size = UDim2.new(0, 93, 0, 26)
+RedeemCodes.Font = Enum.Font.RobotoMono
+RedeemCodes.Text = "Redeem Codes"
+RedeemCodes.TextColor3 = Color3.fromRGB(0, 0, 0)
+RedeemCodes.TextSize = 14.000
+
+JoinCorrectGame.Name = "JoinCorrectGame"
+JoinCorrectGame.Parent = MainFrame
+JoinCorrectGame.BackgroundColor3 = Color3.fromRGB(213, 13, 13)
+JoinCorrectGame.Position = UDim2.new(0.189024284, 0, 0.129907981, 0)
+JoinCorrectGame.Size = UDim2.new(0, 142, 0, 26)
+JoinCorrectGame.Font = Enum.Font.RobotoMono
+JoinCorrectGame.Text = "Join Correct Game"
+JoinCorrectGame.TextColor3 = Color3.fromRGB(0, 0, 0)
+JoinCorrectGame.TextSize = 14.000
+
+Multiplier.Name = "Multiplier"
+Multiplier.Parent = MainFrame
+Multiplier.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Multiplier.Position = UDim2.new(0.527165711, 0, 0.717408001, 0)
+Multiplier.Size = UDim2.new(0, 93, 0, 26)
+Multiplier.Font = Enum.Font.RobotoMono
+Multiplier.Text = "Enable Multi"
+Multiplier.TextColor3 = Color3.fromRGB(0, 0, 0)
+Multiplier.TextSize = 14.000
+
+BuyBeds.Name = "BuyBeds"
+BuyBeds.Parent = MainFrame
+BuyBeds.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+BuyBeds.Position = UDim2.new(0.0511831753, 0, 0.58928299, 0)
+BuyBeds.Size = UDim2.new(0, 93, 0, 26)
+BuyBeds.Font = Enum.Font.RobotoMono
+BuyBeds.Text = "Auto Buy Beds"
+BuyBeds.TextColor3 = Color3.fromRGB(0, 0, 0)
+BuyBeds.TextSize = 14.000
+
+AntiAFK.Name = "AntiAFK"
+AntiAFK.Parent = MainFrame
+AntiAFK.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+AntiAFK.Position = UDim2.new(0.527165711, 0, 0.58928299, 0)
+AntiAFK.Size = UDim2.new(0, 93, 0, 26)
+AntiAFK.Font = Enum.Font.RobotoMono
+AntiAFK.Text = "Anti AFK"
+AntiAFK.TextColor3 = Color3.fromRGB(0, 0, 0)
+AntiAFK.TextSize = 14.000
+
+AutoRankup.Name = "AutoRankup"
+AutoRankup.Parent = MainFrame
+AutoRankup.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+AutoRankup.Position = UDim2.new(0.527165711, 0, 0.458033025, 0)
+AutoRankup.Size = UDim2.new(0, 93, 0, 26)
+AutoRankup.Font = Enum.Font.RobotoMono
+AutoRankup.Text = "Auto Rankup"
+AutoRankup.TextColor3 = Color3.fromRGB(0, 0, 0)
+AutoRankup.TextSize = 14.000
+
+AutoSell.Name = "AutoSell"
+AutoSell.Parent = MainFrame
+AutoSell.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+AutoSell.Position = UDim2.new(0.0511831753, 0, 0.458033025, 0)
+AutoSell.Size = UDim2.new(0, 93, 0, 26)
+AutoSell.Font = Enum.Font.RobotoMono
+AutoSell.Text = "Auto Sell"
+AutoSell.TextColor3 = Color3.fromRGB(0, 0, 0)
+AutoSell.TextSize = 14.000
+
+-- Scripts:
+
+local function WKMZYRP_fake_script() -- TopFrameRGB.RGB 
+	local script = Instance.new('LocalScript', TopFrameRGB)
+
+	local frame = script.Parent
+	
+	while true do
+		for hue = 0, 255, 4 do
+			-- HSV = hue, saturation, value
+			-- If we loop from 0 to 1 repeatedly, we get a rainbow!
+			frame.BorderColor3 = Color3.fromHSV(hue/256, 1, 1)
+			frame.BackgroundColor3 = Color3.fromHSV(hue/256, .5, .8)
+			wait()
+		end
+	end
+end
+coroutine.wrap(WKMZYRP_fake_script)()
+local function ZOAJOY_fake_script() -- MainFrame.Dragable 
+	local script = Instance.new('LocalScript', MainFrame)
+
+	local UserInputService = game:GetService("UserInputService")
+	local runService = (game:GetService("RunService"));
+	
+	local gui = script.Parent
+	
+	local dragging
+	local dragInput
+	local dragStart
+	local startPos
+	
+	function Lerp(a, b, m)
+		return a + (b - a) * m
+	end;
+	
+	local lastMousePos
+	local DRAG_SPEED = (8);
+	function Update(dt)
+		if not (dragging) then return end;
+		if not (startPos) then return end;
+		local delta = (lastMousePos - UserInputService:GetMouseLocation())
+		local xGoal = (startPos.X.Offset - delta.X);
+		local yGoal = (startPos.Y.Offset - delta.Y);
+		gui.Position = UDim2.new(startPos.X.Scale, Lerp(gui.Position.X.Offset, xGoal, dt * DRAG_SPEED), startPos.Y.Scale, Lerp(gui.Position.Y.Offset, yGoal, dt * DRAG_SPEED))
+	end;
+	
+	gui.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = gui.Position
+			lastMousePos = UserInputService:GetMouseLocation()
+	
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	gui.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	
+	runService.Heartbeat:Connect(Update)
+end
+coroutine.wrap(ZOAJOY_fake_script)()
+local function GLJA_fake_script() -- AFButton.RGBb1 
+	local script = Instance.new('LocalScript', AFButton)
+
+	local frame = script.Parent
+	
+	while true do
+		for hue = 0, 255, 4 do
+			-- HSV = hue, saturation, value
+			-- If we loop from 0 to 1 repeatedly, we get a rainbow!
+			frame.BorderColor3 = Color3.fromHSV(hue/256, 1, 1)
+			frame.BackgroundColor3 = Color3.fromHSV(hue/256, .5, .8)
+			wait()
+		end
+	end
+end
+coroutine.wrap(GLJA_fake_script)()
+local function LUFABE_fake_script() -- AFButton.AFScript 
+	local script = Instance.new('LocalScript', AFButton)
+
+	function leftClick()
+		while true do 
+			wait(0.1)
+			local Event = game:GetService("ReplicatedStorage").Events.Dream
+			Event:FireServer()
+		end
+	
+	end
+	
+	function rightClick()
+		while true do 
+			wait(0.1)
+			local Event = game:GetService("ReplicatedStorage").Events.Dream
+			Event:FireServer()
+		end
+	
+	end
+	
+	script.Parent.MouseButton1Click:Connect(leftClick)
+	script.Parent.MouseButton2Click:Connect(rightClick)
+end
+coroutine.wrap(LUFABE_fake_script)()
+local function SWSYUJ_fake_script() -- AutoUpgrade.RGBb1 
+	local script = Instance.new('LocalScript', AutoUpgrade)
+
+	local frame = script.Parent
+	
+	while true do
+		for hue = 0, 255, 4 do
+			-- HSV = hue, saturation, value
+			-- If we loop from 0 to 1 repeatedly, we get a rainbow!
+			frame.BorderColor3 = Color3.fromHSV(hue/256, 1, 1)
+			frame.BackgroundColor3 = Color3.fromHSV(hue/256, .5, .8)
+			wait()
+		end
+	end
+end
+coroutine.wrap(SWSYUJ_fake_script)()
+local function YGUVIY_fake_script() -- AutoUpgrade.LocalScript 
+	local script = Instance.new('LocalScript', AutoUpgrade)
+
+	function leftClick()
+		while true do
+			wait(1)
+			local A_1 = "DreamSpeed"
+			local Event = game:GetService("ReplicatedStorage").Events.Upgrade
+			Event:FireServer(A_1)
+			wait(1)
+			local A_1 = "Nightmare"
+			local Event = game:GetService("ReplicatedStorage").Events.Upgrade
+			Event:FireServer(A_1)
+			wait(1)
+			local A_1 = "Capacity"
+			local Event = game:GetService("ReplicatedStorage").Events.Upgrade
+			Event:FireServer(A_1)
+		end
+	
+	end
+	
+	function rightClick()
+		while true do
+			wait(1)
+			local A_1 = "DreamSpeed"
+			local Event = game:GetService("ReplicatedStorage").Events.Upgrade
+			Event:FireServer(A_1)
+			wait(1)
+			local A_1 = "Nightmare"
+			local Event = game:GetService("ReplicatedStorage").Events.Upgrade
+			Event:FireServer(A_1)
+			wait(1)
+			local A_1 = "Capacity"
+			local Event = game:GetService("ReplicatedStorage").Events.Upgrade
+			Event:FireServer(A_1)
+		end
+	
+	end
+	
+	script.Parent.MouseButton1Click:Connect(leftClick)
+	script.Parent.MouseButton2Click:Connect(rightClick)
+end
+coroutine.wrap(YGUVIY_fake_script)()
+local function MJUD_fake_script() -- RedeemCodes.RGBb1 
+	local script = Instance.new('LocalScript', RedeemCodes)
+
+	local frame = script.Parent
+	
+	while true do
+		for hue = 0, 255, 4 do
+			-- HSV = hue, saturation, value
+			-- If we loop from 0 to 1 repeatedly, we get a rainbow!
+			frame.BorderColor3 = Color3.fromHSV(hue/256, 1, 1)
+			frame.BackgroundColor3 = Color3.fromHSV(hue/256, .5, .8)
+			wait()
+		end
+	end
+end
+coroutine.wrap(MJUD_fake_script)()
+local function BSZL_fake_script() -- RedeemCodes.LocalScript 
+	local script = Instance.new('LocalScript', RedeemCodes)
+
+	function leftClick()
+		local A_1 = "100KPlayers"
+		local Event = game:GetService("ReplicatedStorage").Events.RedeemCode
+		Event:InvokeServer(A_1)
+		wait(0.1)
+		local A_1 = "2200Likes"
+		local Event = game:GetService("ReplicatedStorage").Events.RedeemCode
+		Event:InvokeServer(A_1)
+		wait(0.1)
+		local A_1 = "200kVisits"
+		local Event = game:GetService("ReplicatedStorage").Events.RedeemCode
+		Event:InvokeServer(A_1)
+		wait(0.1)
+		local A_1 = "Find"
+		local Event = game:GetService("ReplicatedStorage").Events.RedeemCode
+		Event:InvokeServer(A_1)
+	end
+	
+	function rightClick()
+		local A_1 = "100KPlayers"
+		local Event = game:GetService("ReplicatedStorage").Events.RedeemCode
+		Event:InvokeServer(A_1)
+		wait(0.1)
+		local A_1 = "2200Likes"
+		local Event = game:GetService("ReplicatedStorage").Events.RedeemCode
+		Event:InvokeServer(A_1)
+		wait(0.1)
+		local A_1 = "200kVisits"
+		local Event = game:GetService("ReplicatedStorage").Events.RedeemCode
+		Event:InvokeServer(A_1)
+		wait(0.1)
+		local A_1 = "Find"
+		local Event = game:GetService("ReplicatedStorage").Events.RedeemCode
+		Event:InvokeServer(A_1)
+	end
+	
+	script.Parent.MouseButton1Click:Connect(leftClick)
+	script.Parent.MouseButton2Click:Connect(rightClick)
+end
+coroutine.wrap(BSZL_fake_script)()
+local function ZOQCNZT_fake_script() -- JoinCorrectGame.LocalScript 
+	local script = Instance.new('LocalScript', JoinCorrectGame)
+
+	
+	
+	
+	function leftClick()
+		local TeleportService = game:GetService("TeleportService")
+		local Button = JoinCorrectGame -- button location in the gui
+		local placeID = 8372375635
+	
+		local function MouseButton1Click()
+			local player = game:GetService("Players").LocalPlayer
+			if player then
+				TeleportService:Teleport(placeID, player)
+			end
+		end
+	
+		Button.MouseButton1Click:Connect(MouseButton1Click())
+	
+	end
+	
+	function rightClick()
+		local TeleportService = game:GetService("TeleportService")
+		local Button = JoinCorrectGame -- button location in the gui
+		local placeID = 8372375635
+	
+		local function MouseButton1Click()
+			local player = game:GetService("Players").LocalPlayer
+			if player then
+				TeleportService:Teleport(placeID, player)
+			end
+		end
+	
+		Button.MouseButton1Click:Connect(MouseButton1Click())
+	
+	end
+	
+	script.Parent.MouseButton1Click:Connect(leftClick)
+	script.Parent.MouseButton2Click:Connect(rightClick)
+end
+coroutine.wrap(ZOQCNZT_fake_script)()
+local function FVOUC_fake_script() -- MainFrame.SlideEffect 
+	local script = Instance.new('LocalScript', MainFrame)
+
+	local object = script.Parent
+	object.AnchorPoint = Vector2.new(0.5, 0.5)
+	object.Position = UDim2.new(0, -object.Size.X.Offset, 0.5, 0)
+	
+	wait(2)
+	
+	object:TweenPosition(UDim2.new(0.6, 0, 0.5, 0))
+end
+coroutine.wrap(FVOUC_fake_script)()
+local function LEAOVME_fake_script() -- Multiplier.RGBb1 
+	local script = Instance.new('LocalScript', Multiplier)
+
+	local frame = script.Parent
+	
+	while true do
+		for hue = 0, 255, 4 do
+			-- HSV = hue, saturation, value
+			-- If we loop from 0 to 1 repeatedly, we get a rainbow!
+			frame.BorderColor3 = Color3.fromHSV(hue/256, 1, 1)
+			frame.BackgroundColor3 = Color3.fromHSV(hue/256, .5, .8)
+			wait()
+		end
+	end
+end
+coroutine.wrap(LEAOVME_fake_script)()
+local function UKYK_fake_script() -- Multiplier.LocalScript 
+	local script = Instance.new('LocalScript', Multiplier)
+
+	function leftClick()
+		local A_1 = 10
+		local Event = game:GetService("ReplicatedStorage").Events.UpdateFriendsOnline
+		Event:FireServer(A_1)
+	
+	end
+	
+	function rightClick()
+		local A_1 = 10
+		local Event = game:GetService("ReplicatedStorage").Events.UpdateFriendsOnline
+		Event:FireServer(A_1)
+	
+	end
+	
+	script.Parent.MouseButton1Click:Connect(leftClick)
+	script.Parent.MouseButton2Click:Connect(rightClick)
+end
+coroutine.wrap(UKYK_fake_script)()
+local function QFOGK_fake_script() -- BuyBeds.RGBb1 
+	local script = Instance.new('LocalScript', BuyBeds)
+
+	local frame = script.Parent
+	
+	while true do
+		for hue = 0, 255, 4 do
+			-- HSV = hue, saturation, value
+			-- If we loop from 0 to 1 repeatedly, we get a rainbow!
+			frame.BorderColor3 = Color3.fromHSV(hue/256, 1, 1)
+			frame.BackgroundColor3 = Color3.fromHSV(hue/256, .5, .8)
+			wait()
+		end
+	end
+end
+coroutine.wrap(QFOGK_fake_script)()
+local function RHBPUEH_fake_script() -- BuyBeds.BuyBedsScript 
+	local script = Instance.new('LocalScript', BuyBeds)
+
+	function leftClick()
+		while true do
+			local A_1 = "PinkSmallBed"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "BlueSmallBed"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "GreenSmallBed"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "YellowSmallBed"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "RedSmallBed"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "Carpet"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "PinkCarpet"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "BlueCarpet"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "GreenCarpet"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "YellowCarpet"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "RedCarpet"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "CotBed"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "PinkCotBed"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "BlueCotBed"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "GreenCotBed"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "YellowCotBed"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "RedCotBed"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "LargeBed"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "PinkLargeBed"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "BlueLargeBed"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "GreenLargeBed"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "YellowLargeBed"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "RedLargeBed"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "BunkBed"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "PinkBunkBed"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "BlueBunkBed"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "GreenBunkBed"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "YellowBunkBed"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "RedBunkBed"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "TripleBunkBed"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "PinkTripleBunkBed"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "BlueTripleBunkBed"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "GreenTripleBunkBed"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "YellowTripleBunkBed"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "RedTripleBunkBed"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(1)
+			local StarterGui = game:GetService("StarterGui")
+			local bindable = Instance.new("BindableFunction")
+	
+			function bindable.OnInvoke(response)
+				print(response .. " chosen")
+			end
+	
+			StarterGui:SetCore("SendNotification", {
+				Title = "Notification",
+				Text = "Script has been disabled due to it being done, Keep in mind this script does not buy every bed, it buys up to RedTripleBunkBed.",
+				Duration = 10,
+			})
+			script.Enabled = false
+			
+		end	
+	end
+	
+	function rightClick()
+		while true do
+			local A_1 = "PinkSmallBed"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "BlueSmallBed"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "GreenSmallBed"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "YellowSmallBed"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "RedSmallBed"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "Carpet"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "PinkCarpet"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "BlueCarpet"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "GreenCarpet"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "YellowCarpet"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "RedCarpet"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "CotBed"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "PinkCotBed"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "BlueCotBed"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "GreenCotBed"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "YellowCotBed"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "RedCotBed"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "LargeBed"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "PinkLargeBed"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "BlueLargeBed"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "GreenLargeBed"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "YellowLargeBed"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "RedLargeBed"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "BunkBed"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "PinkBunkBed"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "BlueBunkBed"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "GreenBunkBed"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "YellowBunkBed"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "RedBunkBed"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "TripleBunkBed"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "PinkTripleBunkBed"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "BlueTripleBunkBed"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "GreenTripleBunkBed"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "YellowTripleBunkBed"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(2)
+			local A_1 = "RedTripleBunkBed"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyBed
+			Event:FireServer(A_1)
+			wait(1)
+			local StarterGui = game:GetService("StarterGui")
+			local bindable = Instance.new("BindableFunction")
+	
+			function bindable.OnInvoke(response)
+				print(response .. " chosen")
+			end
+	
+			StarterGui:SetCore("SendNotification", {
+				Title = "Notification",
+				Text = "Script has been disabled due to it being done, Keep in mind this script does not buy every bed, it buys up to RedTripleBunkBed.",
+				Duration = 10,
+			})
+			script.Enabled = false
+		end
+	end
+	
+	script.Parent.MouseButton1Click:Connect(leftClick)
+	script.Parent.MouseButton2Click:Connect(rightClick)
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+end
+coroutine.wrap(RHBPUEH_fake_script)()
+local function TQDSCZ_fake_script() -- AntiAFK.RGBb1 
+	local script = Instance.new('LocalScript', AntiAFK)
+
+	local frame = script.Parent
+	
+	while true do
+		for hue = 0, 255, 4 do
+			-- HSV = hue, saturation, value
+			-- If we loop from 0 to 1 repeatedly, we get a rainbow!
+			frame.BorderColor3 = Color3.fromHSV(hue/256, 1, 1)
+			frame.BackgroundColor3 = Color3.fromHSV(hue/256, .5, .8)
+			wait()
+		end
+	end
+end
+coroutine.wrap(TQDSCZ_fake_script)()
+local function QINLP_fake_script() -- AntiAFK.LocalScript 
+	local script = Instance.new('LocalScript', AntiAFK)
+
+	function leftClick()
+		local vu = game:GetService("VirtualUser")
+		game:GetService("Players").LocalPlayer.Idled:connect(function()
+			vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+			wait(1)
+			vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+		end)
+	
+	end
+	
+	function rightClick()
+		local vu = game:GetService("VirtualUser")
+		game:GetService("Players").LocalPlayer.Idled:connect(function()
+			vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+			wait(1)
+			vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+		end)
+	
+	end
+	
+	script.Parent.MouseButton1Click:Connect(leftClick)
+	script.Parent.MouseButton2Click:Connect(rightClick)
+end
+coroutine.wrap(QINLP_fake_script)()
+local function ABWCTQJ_fake_script() -- AutoRankup.RGBb1 
+	local script = Instance.new('LocalScript', AutoRankup)
+
+	local frame = script.Parent
+	
+	while true do
+		for hue = 0, 255, 4 do
+			-- HSV = hue, saturation, value
+			-- If we loop from 0 to 1 repeatedly, we get a rainbow!
+			frame.BorderColor3 = Color3.fromHSV(hue/256, 1, 1)
+			frame.BackgroundColor3 = Color3.fromHSV(hue/256, .5, .8)
+			wait()
+		end
+	end
+end
+coroutine.wrap(ABWCTQJ_fake_script)()
+local function YDOLK_fake_script() -- AutoRankup.LocalScript 
+	local script = Instance.new('LocalScript', AutoRankup)
+
+	function leftClick()
+	while true do	
+		local A_1 = "SleepWalker"
+		local Event = game:GetService("ReplicatedStorage").Events.BuyRank
+			Event:FireServer(A_1)
+			wait(10)
+			local A_1 = "Lucid"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyRank
+			Event:FireServer(A_1)
+			wait(10)
+			local A_1 = "Nightmare"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyRank
+			Event:FireServer(A_1)
+			wait(10)
+			local A_1 = "DreamEater"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyRank
+			Event:FireServer(A_1)
+			wait(10)
+			local A_1 = "Soul Controller"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyRank
+			Event:FireServer(A_1)
+			wait(10)
+			local A_1 = "God Dreamer"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyRank
+			Event:FireServer(A_1)
+			wait(10)
+			local A_1 = "Demon Dreamer"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyRank
+			Event:FireServer(A_1)
+			wait(10)
+			local A_1 = "Legendary Dreamer"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyRank
+			Event:FireServer(A_1)
+			wait(10)
+			local A_1 = "Holy Dreamer"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyRank
+			Event:FireServer(A_1)
+			wait(10)
+			local A_1 = "Blessed Dreamer"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyRank
+			Event:FireServer(A_1)
+			wait(10)
+			local A_1 = "Hallowed Dreamer"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyRank
+			Event:FireServer(A_1)
+			wait(10)
+			end
+	
+	
+	end
+	
+	function rightClick()
+		while true do	
+			local A_1 = "SleepWalker"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyRank
+			Event:FireServer(A_1)
+			wait(10)
+			local A_1 = "Lucid"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyRank
+			Event:FireServer(A_1)
+			wait(10)
+			local A_1 = "Nightmare"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyRank
+			Event:FireServer(A_1)
+			wait(10)
+			local A_1 = "DreamEater"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyRank
+			Event:FireServer(A_1)
+			wait(10)
+			local A_1 = "Soul Controller"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyRank
+			Event:FireServer(A_1)
+			wait(10)
+			local A_1 = "God Dreamer"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyRank
+			Event:FireServer(A_1)
+			wait(10)
+			local A_1 = "Demon Dreamer"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyRank
+			Event:FireServer(A_1)
+			wait(10)
+			local A_1 = "Legendary Dreamer"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyRank
+			Event:FireServer(A_1)
+			wait(10)
+			local A_1 = "Holy Dreamer"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyRank
+			Event:FireServer(A_1)
+			wait(10)
+			local A_1 = "Blessed Dreamer"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyRank
+			Event:FireServer(A_1)
+			wait(10)
+			local A_1 = "Hallowed Dreamer"
+			local Event = game:GetService("ReplicatedStorage").Events.BuyRank
+			Event:FireServer(A_1)
+			wait(10)
+		end
+	
+	end
+	
+	script.Parent.MouseButton1Click:Connect(leftClick)
+	script.Parent.MouseButton2Click:Connect(rightClick)
+end
+coroutine.wrap(YDOLK_fake_script)()
+local function ECTSSX_fake_script() -- AutoSell.RGBb1 
+	local script = Instance.new('LocalScript', AutoSell)
+
+	local frame = script.Parent
+	
+	while true do
+		for hue = 0, 255, 4 do
+			-- HSV = hue, saturation, value
+			-- If we loop from 0 to 1 repeatedly, we get a rainbow!
+			frame.BorderColor3 = Color3.fromHSV(hue/256, 1, 1)
+			frame.BackgroundColor3 = Color3.fromHSV(hue/256, .5, .8)
+			wait()
+		end
+	end
+end
+coroutine.wrap(ECTSSX_fake_script)()
+local function MINNBAB_fake_script() -- AutoSell.AutoSell 
+	local script = Instance.new('LocalScript', AutoSell)
+
+	function leftClick()
+		while true do
+			wait(0.2)
+		local Event = game:GetService("ReplicatedStorage").Events.Sell
+			Event:FireServer()
+			wait(0.1)
+			end
+	
+	end
+	
+	function rightClick()
+		while true do
+			wait(0.2)
+		local Event = game:GetService("ReplicatedStorage").Events.Sell
+			Event:FireServer()
+			wait(0.1)
+			end
+	
+	end
+	
+	script.Parent.MouseButton1Click:Connect(leftClick)
+	script.Parent.MouseButton2Click:Connect(rightClick)
+end
+coroutine.wrap(MINNBAB_fake_script)()
